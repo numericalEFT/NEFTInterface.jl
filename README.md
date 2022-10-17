@@ -14,7 +14,6 @@ NEFTInterface.jl bridges Numerical Effective Field Theory pacakages with TRIQS a
 This package has been registered. So, simply type `import Pkg; Pkg.add("NEFTInterface")` in the Julia REPL to install.
 
 ## Interface with TRIQS
-#  Interface with TRIQS
 
 TRIQS (Toolbox for Research on Interacting Quantum Systems) is a scientific project providing a set of C++ and Python libraries for the study of interacting quantum systems. We provide a direct interface to convert TRIQS objects, such as the temporal meshes, the Brillouin zone meshes, and the  multi-dimensional (blocked) Green's functions, to the equivalent objects in our package. It would help TRIQS users to make use of our package without worrying about the different internal data structures.
 
