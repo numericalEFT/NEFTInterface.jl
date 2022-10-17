@@ -5,13 +5,13 @@ using PythonCall
     np = pyimport("numpy")
 
     mt = gf.MeshImTime(beta=1.0, S="Fermion", n_max=3)
-    mjt = from_triqs(mt)
+    mjt = NEFTInterface.from_triqs(mt)
     for (i, x) in enumerate([p for p in mt.values()])
         @test mjt[i] ≈ pyconvert(Float64, x)
     end
 
     mw = gf.MeshImFreq(beta=1.0, S="Fermion", n_max=3)
-    mjw = from_triqs(mw)
+    mjw = NEFTInterface.from_triqs(mw)
     for (i, x) in enumerate([p for p in mw.values()])
         @test mjw[i] ≈ imag(pyconvert(ComplexF64, x))
     end
@@ -22,7 +22,7 @@ using PythonCall
     BZ = lat.BrillouinZone(BL)
     nk = 4
     mk = gf.MeshBrillouinZone(BZ, nk)
-    mjk = from_triqs(mk)
+    mjk = NEFTInterface.from_triqs(mk)
     for p in mk
         ilin = pyconvert(Int, p.linear_index) + 1
         inds = pyconvert(Array, p.index)[1:2] .+ 1
@@ -34,7 +34,7 @@ using PythonCall
 
     # tests for MeshProduct
     mprod = gf.MeshProduct(mt, mw)
-    mjprod = from_triqs(mprod)
+    mjprod = NEFTInterface.from_triqs(mprod)
     # println(mjprod)
     for (t, w) in mprod
         # println(t, w)
@@ -46,7 +46,7 @@ using PythonCall
 
     # test multilayer MeshProduct
     mprod2 = gf.MeshProduct(mk, mprod)
-    mjprod2 = from_triqs(mprod2)
+    mjprod2 = NEFTInterface.from_triqs(mprod2)
     for (k, tw) in mprod2
         # println(t, w)
         ki, ti, wi = pyconvert(Int, k.linear_index) + 1, pyconvert(Int, tw[0].linear_index) + 1, pyconvert(Int, tw[1].linear_index) + 1
@@ -130,7 +130,7 @@ end
 
     blockG = gf.BlockGf(name_list=["1", "2"], block_list=[G_t, G_w], make_copies=false)
 
-    jblockG = from_triqs(blockG)
+    jblockG = NEFTInterface.from_triqs(blockG)
 
     # gt = MeshArray(G_t)
     # @test size(gt) == (3, 2, lj)
