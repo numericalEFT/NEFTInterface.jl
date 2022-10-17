@@ -5,17 +5,18 @@ DocMeta.setdocmeta!(NEFTInterface, :DocTestSetup, :(using NEFTInterface); recurs
 
 makedocs(;
     modules=[NEFTInterface],
-    authors="Kun Chen",
+    authors="Kun Chen, Tao Wang, Xiansheng Cai, PengCheng Hou, and Zhiyi Li",
     repo="https://github.com/numericaleft/NEFTInterface.jl/blob/{commit}{path}#{line}",
     sitename="NEFTInterface.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://numericaleft.github.io/NEFTInterface.jl",
-        edit_link="main",
+        edit_link="master",
         assets=String[]
     ),
     pages=[
         "Home" => "index.md",
+        "Reference" => "lib/triqs.md",
     ]
 )
 

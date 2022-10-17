@@ -2,7 +2,7 @@
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://numericaleft.github.io/NEFTInterface.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://numericaleft.github.io/NEFTInterface.jl/dev/)
-[![Build Status](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Build Status](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml?query=branch%3Amaster)
 [![Coverage](https://codecov.io/gh/numericaleft/NEFTInterface.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/numericaleft/NEFTInterface.jl)
 
 NEFTInterface.jl bridges Numerical Effective Field Theory pacakages with TRIQS and many other external packages.
@@ -125,7 +125,7 @@ A TRIQS Green's function is defined on a set of meshes of continuous variables, 
 - As explained in Example 6, the cartesian index order of data has to be inversed during the conversion.
 - We support three different interfaces for the conversion of TRIQS Green's function. One can construct a new MeshArray with `from_triqs` or `MeshArray` constructor. One can also load TRIQS Green's function into an existing `MeshArray` with the `<<` operator.
 
-### Example 8: Load Triqs block Greens function
+### Example 4: Load Triqs block Greens function
 
 The block Greens function in TRIQS can be converted to a dictionary of `MeshArray` objects in julia. 
 
