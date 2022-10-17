@@ -5,8 +5,8 @@ using BrillouinZoneMeshes
 
 export from_triqs
 
-import GreenFunc.MeshArray
-import GreenFunc.MeshGrids
+# import GreenFunc.MeshArray
+# import GreenFunc.MeshGrids
 # import ..BrillouinZoneMeshes
 
 using PythonCall
@@ -95,7 +95,7 @@ end
     
 Convert a Green's function object from triqs to a MeshArray.
 """
-function MeshArray(objSrc::Py)
+function GreenFunc.MeshArray(objSrc::Py)
     # println(objSrc)
     @assert _check_Gf(objSrc, pyimport("triqs.gf")) "Not a Green's function object"
     innerstate = pyconvert(Tuple, objSrc.target_shape)
