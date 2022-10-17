@@ -1,6 +1,6 @@
 name = "NEFTInterface"
 uuid = "a0053b83-2858-41a9-bfb0-1030075bb8f6"
-authors = ["Kun Chen"]
+authors = ["Kun Chen, Tao Wang, Xiansheng Cai, Pengcheng Hou and Zhiyi Li"]
 version = "0.1.0"
 
 [deps]
