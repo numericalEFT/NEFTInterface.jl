@@ -12,14 +12,14 @@ makedocs(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://numericaleft.github.io/NEFTInterface.jl",
         edit_link="main",
-        assets=String[],
+        assets=String[]
     ),
     pages=[
         "Home" => "index.md",
-    ],
+    ]
 )
 
 deploydocs(;
     repo="github.com/numericaleft/NEFTInterface.jl",
-    devbranch="main",
+    devbranch="master"
 )
