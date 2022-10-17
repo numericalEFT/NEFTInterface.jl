@@ -3,6 +3,12 @@ uuid = "a0053b83-2858-41a9-bfb0-1030075bb8f6"
 authors = ["Kun Chen"]
 version = "0.1.0"
 
+[deps]
+BrillouinZoneMeshes = "9f696214-9961-49f3-89a2-cb1ea204eb6e"
+CompositeGrids = "b5136c89-beeb-4521-9139-60d2cac8be56"
+GreenFunc = "9efc7ea6-d529-4241-ab29-dcf68b94af7c"
+PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
+
 [compat]
 julia = "1.8"
 
