@@ -1,5 +1,5 @@
 # Interface to Triqs
 
 ```@autodocs
-Modules = [GreenFunc.Triqs]
+Modules = [NEFTInterface.Triqs]
 ```
