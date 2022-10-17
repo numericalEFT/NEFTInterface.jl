@@ -21,6 +21,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/numericaleft/NEFTInterface.jl",
+    repo="github.com/numericalEFT/NEFTInterface.jl",
     devbranch="master"
 )
