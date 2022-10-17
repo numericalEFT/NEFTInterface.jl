@@ -7,7 +7,7 @@ CurrentModule = NEFTInterface
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://numericaleft.github.io/NEFTInterface.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://numericaleft.github.io/NEFTInterface.jl/dev/)
 [![Build Status](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/numericaleft/NEFTInterface.jl/actions/workflows/CI.yml?query=branch%3Amaster)
-[![Coverage](https://codecov.io/gh/numericaleft/NEFTInterface.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/numericaleft/NEFTInterface.jl)
+[![Coverage](https://codecov.io/gh/numericaleft/NEFTInterface.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/numericaleft/NEFTInterface.jl)
 
 NEFTInterface.jl bridges Numerical Effective Field Theory pacakages with TRIQS and many other external packages.
 
