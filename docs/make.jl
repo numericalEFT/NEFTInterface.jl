@@ -6,7 +6,7 @@ DocMeta.setdocmeta!(NEFTInterface, :DocTestSetup, :(using NEFTInterface); recurs
 makedocs(;
     modules=[NEFTInterface],
     authors="Kun Chen, Tao Wang, Xiansheng Cai, PengCheng Hou, and Zhiyi Li",
-    repo="https://github.com/numericaleft/NEFTInterface.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/numericalEFT/NEFTInterface.jl/blob/{commit}{path}#{line}",
     sitename="NEFTInterface.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
