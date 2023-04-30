@@ -2,6 +2,7 @@ module Triqs
 using GreenFunc
 using CompositeGrids
 using BrillouinZoneMeshes
+using BrillouinZoneMeshes.LinearAlgebra
 
 export from_triqs
 
@@ -47,7 +48,10 @@ function _get_mesh_from_triqs(triqs_mesh)
         nk = mkdims[1]
         latvec = pyconvert(Array, mkunits)[1:DIM, 1:DIM]' .* nk
         latvec = reverse(latvec, dims=2)
-        umesh = BrillouinZoneMeshes.BaseMesh.UniformMesh{DIM,nk,BrillouinZoneMeshes.BaseMesh.EdgedMesh}([0.0, 0.0], latvec)
+        # umesh = BrillouinZoneMeshes.BaseMesh.UniformMesh{DIM,nk,BrillouinZoneMeshes.BaseMesh.EdgedMesh}([0.0, 0.0], latvec)
+        inv_lv = inv(latvec)
+        cell_v = abs(det(latvec))
+        umesh = BrillouinZoneMeshes.BaseMesh.UMesh{Float64,DIM}(latvec, inv_lv, cell_v, [0.0, 0.0], (nk, nk), [0, 0])
         return umesh
     elseif pyisinstance(triqs_mesh, gf.mesh_product.MeshProduct)
         # expand MeshProduct to a tuple
